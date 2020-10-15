@@ -1,0 +1,12 @@
+{
+  "global": {
+    "add": "Add"
+  },
+  "settings": {
+    "change_gitlab_url": "Change GitLab URL",
+    "change_gitlab_token": "Change GitLab Access Token"
+  },
+  "board": {
+    "tasks": "Tasks: "
+  }
+}

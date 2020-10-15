@@ -1,0 +1,9 @@
+@import './config.scss';
+@import './_fonts.scss';
+
+body {
+  margin: 0;
+  padding: 0;
+  color: $font-color;
+  font-family: $font-family;
+}
