@@ -1,0 +1,32 @@
+<div class="main-view">
+  <div class="main-view__container">
+    <div class="main-view__container__top">
+      <mat-form-field appearance="fill">
+        <mat-label>Choose an option</mat-label>
+        <mat-select [(value)]="typeCrypt">
+          <mat-option value="encrypt">Encrypt</mat-option>
+          <mat-option value="decrypt">Decrypt</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Choose a barcode</mat-label>
+        <mat-select [(value)]="barcodeType">
+          <mat-option value="encrypt">Aztec</mat-option>
+          <mat-option value="decrypt">Barcode</mat-option>
+          <mat-option value="decrypt">Datamatrix</mat-option>
+          <mat-option value="decrypt">Qrcode</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+
+    <div class="main-view__container__body">
+      <barcode-service-frontend-main-view-encrypt
+        *ngIf="typeCrypt === 'encrypt'"
+      ></barcode-service-frontend-main-view-encrypt>
+      <barcode-service-frontend-main-view-decrypt
+        *ngIf="typeCrypt === 'decrypt'"
+      ></barcode-service-frontend-main-view-decrypt>
+    </div>
+  </div>
+</div>

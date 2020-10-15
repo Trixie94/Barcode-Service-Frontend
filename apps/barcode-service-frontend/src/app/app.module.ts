@@ -14,6 +14,8 @@ import { AngularSvgIconModule } from 'angular-svg-icon';
 import { MarkdownModule } from 'ngx-markdown';
 import { JwtInterceptor } from './core/interceptors/jwt.interceptor';
 import { ErrorInterceptor } from './core/interceptors/error.interceptor';
+import { HeaderComponent } from './core/layout/header/header.component';
+import { FooterComponent } from './core/layout/footer/footer.component';
 
 /**
  * Initialize translate loader
@@ -31,8 +33,10 @@ export function initializeApp(appConfigService: AppConfigService) {
   return () => appConfigService.load();
 }
 
+const components = [MainLayoutComponent, HeaderComponent, FooterComponent];
+
 @NgModule({
-  declarations: [AppComponent, MainLayoutComponent],
+  declarations: [AppComponent, ...components],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
     HttpClientModule,

@@ -1,0 +1,21 @@
+.main-view {
+  &__container {
+    background-color: #f4f3ef;
+    width: 100vw;
+    height: 100vh;
+    padding: 50px;
+
+    &__top {
+      // padding: 50px 100px;
+      display: flex;
+
+      .mat-form-field {
+        margin-right: 200px;
+      }
+    }
+
+    &__body {
+      // padding: 0 100px;
+    }
+  }
+}
